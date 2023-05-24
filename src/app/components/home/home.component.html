@@ -1,1 +1,23 @@
-<p>home works!</p>
+<div class="d-flex justify-content-center">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+            <th scope="col" class="w-auto">Pseudo</th>
+          <th scope="col" class="w-auto">Lastname</th>
+          <th scope="col" class="w-auto">Firstname</th>
+          <th scope="col" class="w-auto">Role</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users$ | async; let i = index">
+          <td class="w-auto">{{ user.pseudo }}</td>
+          <td class="w-auto">{{ user.lastname }}</td>
+          <td class="w-auto">{{ user.firstname }}</td>
+          <td class="w-auto">{{ user.role }}</td>
+          <td><button type="button" class="btn btn-primary btn-sm">View Profile</button><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
