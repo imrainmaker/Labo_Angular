@@ -16,4 +16,8 @@ export class APIService {
   getAll() : Observable<User[]>{
     return this._http.get<User[]>(this.urlAPI)
   };
+
+  getById(id:number) : Observable<User>{
+    return this._http.get<User>(this.urlAPI +"/" +id)
+  }
 }
